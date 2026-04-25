@@ -1,0 +1,35 @@
+---
+description: API, язык запросов и cookie-авторизация (бэкенд Nest)
+globs: src/shared/api/**/*,src/entities/session/**/*,src/features/auth/**/*
+alwaysApply: false
+---
+
+# Язык и заголовки
+
+- На каждый запрос к бэкенду передавать `Accept-Language` в соответствии с локалью UI (`useLocale()` из next-intl на клиенте; на сервере — из `getLocale()` / параметра `[locale]`).
+- Сервер учитывает `en` и `ru` по первому подходящему тегу; иначе дефолт на бэке — `en`. Локали роутера держать согласованными с этим набором.
+
+# Куки и CORS
+
+- Access и refresh только в **httpOnly**-cookie; не читать токены из `document.cookie` и не класть их в JS-хранилища.
+- Все запросы к API, где участвуют куки: **`credentials: 'include'`** (централизовано в `fetchJson` / HTTP-слое).
+- При SPA на другом origin, чем API: на бэке явный список origin (не `*`), для кросс-сайтовых cookie обычно `SameSite=None` и `Secure` (HTTPS).
+
+# Префикс и пути auth
+
+- Префикса `/api` у auth-эндпоинтов нет: `/auth/register`, `/auth/login`, `/auth/refresh`, `/auth/logout`, `/auth/me`.
+
+# Поведение при 401
+
+- Для путей, кроме `/auth/login`, `/auth/register`, `/auth/refresh`, `/auth/logout`: при **401** один раз выполнить `POST /auth/refresh` с `credentials: 'include'`, затем повторить исходный запрос. Повторный **401** — считать сессию недействительной (очистка данных пользователя, редирект на экран логина).
+
+# Формат ошибок API
+
+- Тело ошибки: `statusCode`, `message`, `code`, `requestId`, `timestamp`, опционально `details`.
+- Полезные `code`: `VALIDATION_ERROR` (часто `details.issues`), `HTTP_401`, `HTTP_409`, `HTTP_429` и др. `HTTP_<status>`.
+- Заголовок `x-request-id` дублируется в теле как `requestId`.
+
+# FSD
+
+- Схемы Zod, типы и **чистые** функции запросов (`getMe`, `postLogin`, …) — в `entities/session`.
+- Хуки React Query и привязка к локали (`useLocale`) — в `features/auth`.
