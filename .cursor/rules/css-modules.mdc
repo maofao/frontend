@@ -9,7 +9,7 @@ alwaysApply: false
 ## CSS Modules
 
 - Стили компонентов — в `*.module.css` рядом с `.tsx` или в согласованном сегменте слайса (например `ui/`). Имена классов через `styles.*`; не использовать строковые BEM-цепочки в `className` без модуля.
-- Глобально — только база: сброс/нормализация, шрифты, CSS-переменные темы в [globals.css](src/app/globals.css) или `shared/styles`; без разрастания глобальных селекторов под фичи.
+- Глобальная база (не раздувать под фичи): [globals.css](src/app/globals.css) — `@import` слоёв ниже, минимальный reset (`box-sizing`, медиа, кнопки), общие правила без доменной логики; [tokens.css](src/shared/styles/tokens.css) — только CSS custom properties (цвета, типографика, отступы, радиусы, тени, z-index, контейнер, motion); [base.css](src/shared/styles/base.css) — привязка токенов к `html`/`body`, базовые заголовки, `prefers-reduced-motion`. Шрифты через `next/font` — в [fonts.ts](src/app/fonts.ts), класс переменных на `<html>` в локальном layout. Новые глобальные селекторы и сырые значения вместо токенов — только если нельзя иначе.
 
 ## Без UI-китов
 

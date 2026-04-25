@@ -1,6 +1,38 @@
 {
+  "Header": {
+    "brand": "Project",
+    "navArtists": "Artists",
+    "navAlbums": "Albums",
+    "navRace": "Race",
+    "login": "Sign in",
+    "profile": "Profile",
+    "navAria": "Site sections"
+  },
+  "NavPages": {
+    "artists": "Artists",
+    "albums": "Albums",
+    "race": "Race"
+  },
   "Metadata": {
     "title": "Frontend",
     "description": "Next.js application"
+  },
+  "Auth": {
+    "titleLogin": "Sign in",
+    "titleRegister": "Create account",
+    "email": "Email",
+    "password": "Password",
+    "displayName": "Display name",
+    "confirmPassword": "Confirm password",
+    "submitLogin": "Sign in",
+    "submitRegister": "Register",
+    "noAccount": "No account?",
+    "goRegister": "Register",
+    "hasAccount": "Already have an account?",
+    "goLogin": "Sign in",
+    "passwordMismatch": "Passwords do not match",
+    "emailTaken": "This email is already taken",
+    "appTitle": "App",
+    "logout": "Log out"
   }
 }

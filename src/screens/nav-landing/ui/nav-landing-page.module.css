@@ -1,0 +1,12 @@
+.main {
+  padding: var(--space-section-y) var(--gutter-x);
+  max-width: var(--container-inline);
+  margin-inline: auto;
+}
+
+.title {
+  font-family: var(--font-stack-heading);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-tight);
+  color: var(--color-fg);
+}

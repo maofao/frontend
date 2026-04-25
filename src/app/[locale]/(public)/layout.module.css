@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  min-height: 100dvh;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+  background-color: var(--color-bg);
+}
+
+.inner {
+  display: flex;
+  width: 100%;
+  max-width: 24rem;
+  justify-content: center;
+}

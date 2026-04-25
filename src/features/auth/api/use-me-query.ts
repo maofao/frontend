@@ -10,5 +10,6 @@ export function useMeQuery() {
     queryKey: sessionKeys.me(),
     queryFn: () => getMe(locale),
     retry: false,
+    staleTime: 60_000,
   });
 }

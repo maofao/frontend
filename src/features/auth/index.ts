@@ -1,6 +1,11 @@
 export { loginBodySchema, registerBodySchema } from "@/entities/session";
+export { registerFormSchema, type RegisterFormValues } from "./model/schemas";
 export { useMeQuery } from "./api/use-me-query";
 export { useLoginMutation } from "./api/use-login-mutation";
 export { useRegisterMutation } from "./api/use-register-mutation";
 export { useLogoutMutation } from "./api/use-logout-mutation";
 export { useRefreshMutation } from "./api/use-refresh-mutation";
+export { LoginForm } from "./ui/login-form";
+export { RegisterForm } from "./ui/register-form";
+export { SessionGate } from "./ui/session-gate";
+export { RedirectIfAuthed } from "./ui/redirect-if-authed";

@@ -1,0 +1,17 @@
+.root {
+  display: block;
+  max-width: min(100%, 28rem);
+  margin-bottom: var(--space-2xs);
+  font-family: var(--font-stack-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  font-weight: 600;
+  color: var(--color-fg-muted);
+  letter-spacing: 0.01em;
+}
+
+.required {
+  margin-inline-start: var(--space-2xs);
+  font-weight: 600;
+  color: var(--color-danger);
+}

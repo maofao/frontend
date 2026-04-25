@@ -1,6 +1,38 @@
 {
+  "Header": {
+    "brand": "Проект",
+    "navArtists": "Артисты",
+    "navAlbums": "Альбомы",
+    "navRace": "Гонка",
+    "login": "Вход",
+    "profile": "Профиль",
+    "navAria": "Разделы сайта"
+  },
+  "NavPages": {
+    "artists": "Артисты",
+    "albums": "Альбомы",
+    "race": "Гонка"
+  },
   "Metadata": {
     "title": "Frontend",
     "description": "Next.js приложение"
+  },
+  "Auth": {
+    "titleLogin": "Вход",
+    "titleRegister": "Регистрация",
+    "email": "Email",
+    "password": "Пароль",
+    "displayName": "Имя",
+    "confirmPassword": "Повтор пароля",
+    "submitLogin": "Войти",
+    "submitRegister": "Зарегистрироваться",
+    "noAccount": "Нет аккаунта?",
+    "goRegister": "Регистрация",
+    "hasAccount": "Уже есть аккаунт?",
+    "goLogin": "Войти",
+    "passwordMismatch": "Пароли не совпадают",
+    "emailTaken": "Этот email уже занят",
+    "appTitle": "Приложение",
+    "logout": "Выйти"
   }
 }
