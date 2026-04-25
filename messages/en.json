@@ -6,7 +6,14 @@
     "navRace": "Race",
     "login": "Sign in",
     "profile": "Profile",
-    "navAria": "Site sections"
+    "navAria": "Site sections",
+    "localeSwitchLabel": "Interface language",
+    "localeRu": "RU",
+    "localeEn": "EN",
+    "menuToggle": "Menu",
+    "menuClose": "Close menu",
+    "menuDrawerAria": "Navigation menu",
+    "drawerNavLinks": "Sections"
   },
   "NavPages": {
     "artists": "Artists",

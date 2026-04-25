@@ -6,7 +6,14 @@
     "navRace": "Гонка",
     "login": "Вход",
     "profile": "Профиль",
-    "navAria": "Разделы сайта"
+    "navAria": "Разделы сайта",
+    "localeSwitchLabel": "Язык интерфейса",
+    "localeRu": "RU",
+    "localeEn": "EN",
+    "menuToggle": "Меню",
+    "menuClose": "Закрыть меню",
+    "menuDrawerAria": "Меню навигации",
+    "drawerNavLinks": "Разделы"
   },
   "NavPages": {
     "artists": "Артисты",
